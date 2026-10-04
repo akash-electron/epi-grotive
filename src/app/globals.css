@@ -20,6 +20,16 @@
   --font-rajdhani: var(--font-rajdhani), "Arial Narrow", sans-serif;
   --font-exo: var(--font-exo), "Inter", sans-serif;
   --font-gobold: var(--font-gobold), "Arial Black", sans-serif;
+  --font-barlow: var(--font-barlow), "Arial Narrow", sans-serif;
+  --font-bebas: var(--font-bebas), "Arial Narrow", sans-serif;
+  --font-roboto-condensed: var(--font-roboto-condensed), "Arial Narrow", sans-serif;
+}
+
+/* Desktop design unit: 1px of the 1920px Figma frame. Scales with the viewport
+   (no cap), so wide monitors get the same proportions instead of empty space.
+   Use as calc(N * var(--u)). */
+:root {
+  --u: calc(100vw / 1920);
 }
 
 html {
@@ -129,3 +139,59 @@ body {
 .animate-float-slow {
   animation: float-slow 6s ease-in-out infinite;
 }
+
+/* IP carousel: the item that wraps from one end to the other fades in */
+@keyframes ip-pop {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: none; }
+}
+.ip-pop { animation: ip-pop 0.5s ease-out 0.2s both; }
+
+/* IP carousel: centre IP. The logo pops in when it becomes the centre, then
+   floats gently; a soft ring pulses out from the circle. */
+@keyframes ip-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1.4%); }
+}
+@keyframes ip-ring {
+  0% { transform: scale(0.97); opacity: 0; }
+  8% { opacity: 0.55; }
+  100% { transform: scale(1.13); opacity: 0; }
+}
+@keyframes ip-text-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+.ip-float { animation: ip-float 5s ease-in-out infinite; }
+.ip-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 121, 255, 0.55);
+  pointer-events: none;
+  animation: ip-ring 2.8s ease-out 0.5s infinite both;
+}
+.ip-text-in { animation: ip-text-in 0.6s ease-out 0.3s both; }
+@media (prefers-reduced-motion: reduce) {
+  .ip-ring { display: none; }
+  .ip-float, .ip-text-in { animation: none; }
+}
+
+/* Portfolio photo rows: endless drift, top row left, bottom row right.
+   Distances are one strip period (8 photos) in 1920px-frame units. */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(var(--period, 2720) * -1 * var(--u))); }
+}
+@keyframes marquee-right {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(var(--period, 2720) * var(--u))); }
+}
+.marquee-left { animation: marquee-left 75s linear infinite; will-change: transform; }
+.marquee-right { animation: marquee-right 75s linear infinite; will-change: transform; }
+@media (prefers-reduced-motion: reduce) {
+  .marquee-left, .marquee-right { animation: none; }
+}
+
+/* Contact form placeholders use the design's muted blue-grey */
+.ip-ph::placeholder { color: #647495; opacity: 1; }

@@ -8,22 +8,27 @@ import Brands from "@/components/Brands";
 import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { getContent } from "@/lib/content/store";
 
-export default function Home() {
+/* Content comes from the shared MongoDB document, so render per request. */
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const c = await getContent();
   return (
     <div className="flex min-h-full flex-col bg-white">
-      <Header />
+      <Header data={c.header} socials={c.socials} />
       <main className="flex-1">
-        <Hero />
-        <Engines />
-        <Stats />
-        <Deliver />
-        <IpsCarousel />
-        <Brands />
-        <Portfolio />
-        <Contact />
+        <Hero data={c.hero} />
+        <Engines data={c.engines} />
+        <Stats data={c.stats} />
+        <Deliver data={c.deliver} />
+        <IpsCarousel data={c.ips} />
+        <Brands data={c.brands} />
+        <Portfolio data={c.portfolio} />
+        <Contact data={c.contact} />
       </main>
-      <Footer />
+      <Footer data={c.footer} socials={c.socials} />
     </div>
   );
 }

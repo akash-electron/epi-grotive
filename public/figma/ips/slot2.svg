@@ -1,0 +1,18 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="275.491" height="268.4" viewBox="0 0 275.491 268.4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Clip path group">
+<mask id="mask0_0_71" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="276" height="269">
+<g id="node-212-insideStroke">
+<path id="Vector" d="M137.746 0C213.82 0 275.491 60.0832 275.491 134.2C275.491 208.316 213.82 268.4 137.746 268.4C61.6708 268.4 0 208.316 0 134.2C0 60.0832 61.6708 0 137.746 0Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_0_71)">
+<path id="Vector_2" d="M137.746 0C213.82 0 275.491 60.0832 275.491 134.2C275.491 208.316 213.82 268.4 137.746 268.4C61.6708 268.4 0 208.316 0 134.2C0 60.0832 61.6708 0 137.746 0Z" fill="url(#paint0_linear_0_71)" stroke="#006CFF" stroke-width="2"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_71" x1="143.3" y1="-43.7709" x2="143.3" y2="205.841" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E5F0FF"/>
+<stop offset="1" stop-color="#F8FAFF"/>
+</linearGradient>
+</defs>
+</svg>

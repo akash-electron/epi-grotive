@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Orbit" clip-path="url(#clip0_0_25)">
+<circle id="Outer orbit" cx="31" cy="31" r="30.5" stroke="#CEE0FC"/>
+<circle id="Inner orbit" cx="31" cy="31" r="20.5" stroke="#D8E6FA"/>
+<circle id="Core" cx="31" cy="31" r="7.5" fill="#BFD8FC"/>
+<circle id="Satellite" cx="51" cy="9" r="3" fill="#086BFA"/>
+</g>
+<defs>
+<clipPath id="clip0_0_25">
+<rect width="62" height="62" fill="white"/>
+</clipPath>
+</defs>
+</svg>

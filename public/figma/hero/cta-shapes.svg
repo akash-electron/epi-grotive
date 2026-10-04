@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="292" height="58" viewBox="0 0 292 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="hero-cta-source-shapes" clip-path="url(#clip0_0_126)">
+<path id="Vector" d="M25.1941 0.013004H266.806C280.719 0.013004 291.998 11.2147 291.998 25.0326V32.9804C291.998 46.7983 280.719 58 266.806 58H25.1941C11.2809 58 0.00195 46.7983 0.00195 32.9804V25.0326C0.00195 11.2147 11.2809 0.013004 25.1941 0.013004Z" fill="white" stroke="#006CFF"/>
+<path id="Vector_2" d="M29.5262 2.84314H261.981C275.894 2.84314 287.173 14.0448 287.173 27.8627C287.173 41.6807 275.894 52.8824 261.981 52.8824H29.5262C15.6129 52.8824 4.33403 41.6807 4.33403 27.8627C4.33403 14.0448 15.6129 2.84314 29.5262 2.84314Z" fill="#006CFF"/>
+</g>
+<defs>
+<clipPath id="clip0_0_126">
+<rect width="292" height="58" fill="white"/>
+</clipPath>
+</defs>
+</svg>

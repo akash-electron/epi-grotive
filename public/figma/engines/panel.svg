@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1658" height="743" viewBox="0 0 1658 743" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Two engines / native empty collage panel" clip-path="url(#clip0_0_124)">
+<path id="Vector" d="M88 0H1570C1618.6 0 1658 39.3989 1658 88V655C1658 703.601 1618.6 743 1570 743H88C39.3989 743 0 703.601 0 655V88C0 39.3989 39.3989 0 88 0Z" fill="url(#paint0_linear_0_124)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_124" x1="895.801" y1="263.633" x2="895.801" y2="954.623" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E5F0FF"/>
+<stop offset="1" stop-color="#F8FAFF"/>
+</linearGradient>
+<clipPath id="clip0_0_124">
+<rect width="1658" height="743" fill="white"/>
+</clipPath>
+</defs>
+</svg>

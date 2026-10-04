@@ -1,0 +1,16 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="304" height="178" viewBox="0 0 304 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="metric-linechart / native area and curve">
+<path id="Vector" d="M5 158C24 143 37 127 64 120C98 117 119 73 155 69C176 65 192 72 219 54C243 37 256 20 289 19V173H5V158Z" fill="url(#paint0_linear_0_86)"/>
+<path id="Vector_2" d="M5 158C24 143 37 127 64 120C98 117 119 73 155 69C176 65 192 72 219 54C243 37 256 20 289 19" stroke="url(#paint1_linear_0_86)" stroke-width="1.35"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_86" x1="5" y1="19" x2="5" y2="173" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D6E5FF" stop-opacity="0.45"/>
+<stop offset="1" stop-color="#EEF5FF" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_86" x1="5" y1="19" x2="289" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E4EFFF"/>
+<stop offset="1" stop-color="#4688FF"/>
+</linearGradient>
+</defs>
+</svg>
