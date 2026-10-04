@@ -1,26 +1,131 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary: #0066ff;
+  --color-primary-dark: #084fd1;
+  --color-echo: #8fbeff;
+  --color-navy: #0a1b33;
+  --color-navy-deep: #0b1a39;
+  --color-panel: #041832;
+  --color-bar: #e7f1fe;
+  --color-mist: #eef4ff;
+  --color-ink: #231f20;
+  --color-muted: #52627b;
+  --color-navlink: #676767;
+  --color-line: #e2eafb;
+  --color-accent-red: #fd5242;
+
+  --font-display: "General Sans", "Archivo", "Inter", sans-serif;
+  --font-body: var(--font-body), "Inter", sans-serif;
+  --font-rajdhani: var(--font-rajdhani), "Arial Narrow", sans-serif;
+  --font-exo: var(--font-exo), "Inter", sans-serif;
+  --font-gobold: var(--font-gobold), "Arial Black", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Blueprint backgrounds from user-provided assets */
+.bg-grid-light {
+  background-image: url("/grid-light.png");
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+}
+.bg-grid-blue {
+  background-image: url("/grid-blue-tile.png");
+  background-size: 34.44vw auto;
+  background-position: top left;
+}
+/* Full-bleed blue bands: seamless tile sized to the design's grid density
+   (8 cells per tile, ~62px cells at 1440px viewport, scales with vw) */
+.bg-band {
+  background-image: url("/grid-blue-tile.png");
+  background-size: 34.44vw auto;
+  background-position: top left;
+}
+
+/* Speckle dot texture (hero edges) */
+.speckle {
+  background-image: radial-gradient(#0b63ff 1.1px, transparent 1.6px);
+  background-size: 13px 13px;
+}
+.speckle-fade-l {
+  mask-image: linear-gradient(to right, black 20%, transparent 90%);
+  -webkit-mask-image: linear-gradient(to right, black 20%, transparent 90%);
+}
+.speckle-fade-r {
+  mask-image: linear-gradient(to left, black 20%, transparent 90%);
+  -webkit-mask-image: linear-gradient(to left, black 20%, transparent 90%);
+}
+
+/* Chamfered (diagonal-cut) top corners, as in the design hero panel */
+.chamfer-top {
+  clip-path: polygon(
+    30px 0,
+    calc(100% - 30px) 0,
+    100% 30px,
+    100% 100%,
+    0 100%,
+    0 30px
+  );
+}
+@media (min-width: 640px) {
+  .chamfer-top {
+    clip-path: polygon(
+      52px 0,
+      calc(100% - 52px) 0,
+      100% 52px,
+      100% 100%,
+      0 100%,
+      0 52px
+    );
+  }
+}
+
+/* Animations (single kill-switch via lib/animations.ts + Reveal) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
 }
